@@ -1,0 +1,35 @@
+public class ApplesOranges {
+	
+	/* s: integer, starting point of Sam's house location.
+	 * t: integer, ending location of Sam's house location.
+	 * a: integer, location of the Apple tree.
+	 * b: integer, location of the Orange tree.
+	 * apples: integer array, distances at which each apple falls from the tree.
+	 * oranges: integer array, distances at which each orange falls from the tree.*/
+	
+	static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
+
+        int fallenApples = 0;
+        int fallenOranges = 0;
+        for(int i=0;i<apples.length;i++){
+            int position = a + apples[i];
+            if(position >= s && position <= t){
+                fallenApples++;
+            } 
+        }
+        for(int i=0;i<oranges.length;i++){
+            int position = b + oranges[i];
+            if(position >= s && position <= t){
+                fallenOranges++;
+            } 
+        }
+        System.out.println(fallenApples);
+        System.out.println(fallenOranges);
+    }
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}
