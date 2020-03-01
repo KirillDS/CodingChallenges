@@ -1,0 +1,25 @@
+static void bonAppetit(List<Integer> bill, int k, int b) {
+
+        //bill - array representing the cost of each item.
+        //k - representing index of item anna didn't eat.
+        //b - amount of money that anna contributed.
+        
+        /* This section calculates the total cost from the list.*/
+        int billing = 0;
+        for(int i = 0; i < bill.size(); i++){
+            billing += bill.get(i);
+        }
+        
+        /* Keeps the condition and prints occording to the input.
+         * 'over-charge' is the main feature, 'under-charged' (if she pays less)
+         * can be implemented later.
+         */
+        int totalBill = (billing - bill.get(k))/2;
+        int anna_overCharged = b - totalBill;
+        if(totalBill == b){
+            System.out.print("Bon Appetit");
+        }
+        else{
+            System.out.print(anna_overCharged); 
+        }
+    }
