@@ -1,0 +1,17 @@
+public class ReversingArrays {
+	
+	static int[] reverseArray(int[] a) {
+        int length = a.length;
+        int[] newArray = new int[length];
+        for(int i = 0; i < length; i++){
+            newArray[i] = a[a.length-1-i];
+        }
+        return newArray;
+    }
+	
+	
+	public static void main(String[] args) {
+		int[] a = {1,2,3,4,5,6,7};
+		reverseArray(a);
+	}	
+}
